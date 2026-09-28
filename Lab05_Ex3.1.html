@@ -67,6 +67,40 @@
 			font-size: 1.05rem;
 		}
 
+		.profile-details {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+			gap: 12px 24px;
+			margin: 0;
+			padding: 16px 20px;
+			border-left: 3px solid var(--accent);
+			background: var(--paper);
+		}
+
+		.profile-details div { min-width: 0; }
+
+		.profile-details dt {
+			color: var(--muted);
+			font-size: 0.85rem;
+		}
+
+		.profile-details dd {
+			margin: 2px 0 0;
+			font-weight: 700;
+		}
+
+		.pdf-link {
+			display: inline-block;
+			padding: 10px 16px;
+			border: 1px solid var(--accent);
+			background: var(--accent);
+			color: #fff;
+			font-weight: 700;
+			text-decoration: none;
+		}
+
+		.pdf-link:hover, .pdf-link:focus-visible { background: #06666a; }
+
 		section { margin: 28px 0 36px; }
 
 		h2 {
@@ -130,14 +164,38 @@
 </head>
 <body>
 	<main class="page">
+		<section aria-labelledby="personal-info-title">
+			<h2 id="personal-info-title">Thông tin cá nhân</h2>
+			<dl class="profile-details">
+				<div>
+					<dt>Họ và tên</dt>
+					<dd>Nguyễn Trọng</dd>
+				</div>
+				<div>
+					<dt>MSSV</dt>
+					<dd>B2605389</dd>
+				</div>
+				<div>
+					<dt>Lớp học phần</dt>
+					<dd>DI26D1A2</dd>
+				</div>
+			</dl>
+			<p class="intro">Mình là sinh viên đang học tập và thực hành các kỹ năng thiết kế nội dung số, trình bày thông tin và xây dựng trang web.</p>
+		</section>
+
 		<header>
 			<p class="eyebrow">Học tập trong thời đại số</p>
 			<h1>Lợi ích của công nghệ số trong học tập</h1>
 			<p class="intro">Khám phá cách công nghệ giúp việc học trở nên linh hoạt, kết nối và dễ tiếp cận hơn.</p>
 		</header>
 
+		<section aria-labelledby="pdf-title">
+			<h2 id="pdf-title">Sản phẩm PDF</h2>
+			<a class="pdf-link" href="Lab05_Ex1.1.pdf" target="_blank" rel="noopener">Mở sản phẩm PDF</a>
+		</section>
+
 		<section aria-labelledby="infographic-title">
-			<h2 id="infographic-title">Infographic</h2>
+			<h2 id="infographic-title">Infographic PNG</h2>
 			<figure>
 				<img
 					class="infographic"
@@ -150,7 +208,8 @@
 		</section>
 
 		<section aria-labelledby="video-title">
-			<h2 id="video-title">Video: Ứng dụng công nghệ số trong học tập</h2>
+			<h2 id="video-title">Video YouTube</h2>
+			<p class="intro">Video: Ứng dụng công nghệ số trong học tập</p>
 			<div class="video-frame">
 				<iframe
 					src="https://www.youtube-nocookie.com/embed/0vNDbq58xOQ"
